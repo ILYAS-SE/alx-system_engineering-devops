@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$WATER$STIR" | tr 'ewatrir.' '01234' | awk '{ sum += $1 } END { printf("%s\n", sum) }' | tr '012345' 'shbcol'
+printf "%o\n" $(( 5#$( echo $WATER | tr water 01234 ) + 5#$( echo $STIR |tr stir. 01234 ) )) | tr
